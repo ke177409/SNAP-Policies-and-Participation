@@ -39,13 +39,13 @@ Policies that do not limit the number of household vehicles and offered the simp
 Policies that allow telephone interviews (instead of face-to-face interviews) at initial certification had a moderate positive correlation with policies that allow households to apply for SNAP online (0.59). 
 
 <p align="center">
-<img src="CORRHEATMAP" width=370 height=330>
+<img src="Images/corr_heatmap_3.png" width=700 height=660>
 </p>
 
 A positive linear relationship was detected between earning and nonearning individuals with 7 to 12 month recertification periods (0.89). I hypothesized that as earning proportions increase, nonearning proportions will also increase. A linear regression analysis was performed to assess how the proportions of earning individuals influences the proportions of nonearning individuals. The mean squared error for the training set was 0.0339 and the R2 score was 0.7973. This model is a good fit for the data and validated my hypothesis. This relationship is likely due to nonearning individuals, such as children or other dependents, live within the same household as earning individuals. 
 
 <p align="center">
-<img src="REGRESSION" width=370 height=330>
+<img src="Images/regression_train.png" width=500 height=460>
 </p>
 
 The EBT categorical plot was created to plot the different dollar percentages issued using EBT. I found that beginning in most of 2004 and onward, at least 80% of SNAP benefits were accounted by EBT in all states. 
