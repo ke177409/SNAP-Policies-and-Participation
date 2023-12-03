@@ -10,9 +10,9 @@ Utilizing the Supplemental Nutrition and Assistance Program (SNAP) Policy Databa
 ### [Tableau Dashboard](https://public.tableau.com/app/profile/kara.evans/viz/SNAPPoliciesParticipation/SNAPPoliciesParticipation?publish=yes)
 
 ## Tools & Skills
-Python Version: 3.11
 Tableau
 
+Python Version: 3.11
 Packages: pandas, NumPy, Matplotlib, seaborn, folium, json, sklearn, pylab, statsmodels
 * Executed data wrangling and cleaning operations prior to analysis.
 * Conducted geospatial analysis using a shapefile to create a choropleth map.
