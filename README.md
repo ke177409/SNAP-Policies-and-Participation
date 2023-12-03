@@ -81,6 +81,14 @@ Recommendation: Remove barriers that prevent eligible populations from easily ap
 * Vermont participation rates were high in 2013, but not in 2011. Policies granting waivers for in-person initial certification interviews was implemented in Vermont for the first time in January 2007, removed in April 2011, and reinstated in September 2012.
 Recommendation: Policy makers should avoid frequent policy changes because this may be disruptive to eligible populations. Participants could suddenly lose eligibility and it may be difficult for individuals to understand the program's limitations and requirements.
 
+## Next Steps
+* Due to time constraints, this analysis focused on states with high estimated participation rates. To provide a more comprehensive understanding of policy influence, extending this analysis to encompass all states could yield additional insights.
+
+* Developing a reliable time series model to forecast the proportions of recipient groups and their recertification periods could assist policymakers in tailoring policies to better accommodate the predominant SNAP recipient groups.
+
+* Augmenting the database with subsequent years' data would enhance the relevance and currency of the insights derived from the analysis.
+
+
 ## The Learning Experience
 A choropleth map was generated to illustrate the average distribution of reported call centers across the United States, utilizing a scale where 0 denotes no call center presence, 1 indicates a call center, and 2 represents a call center situated in specific parts of a state. Unfortunately, the map's effectiveness in this analysis was limited due to the inability to appropriately adjust the color scale to accurately reflect the data.
 
