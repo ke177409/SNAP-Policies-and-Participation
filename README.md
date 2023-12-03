@@ -61,7 +61,7 @@ The fingerprint categorical plot was created to show which states reported certa
 A cluster analysis was performed using the k-means algorithm in an attempt to identify other groups not detected in the raw data. A scatter plot comparing outreach spending and the proportion of earning individuals showed some outlier data that was assigned its own group. I determined that this group represented outreach spending for the state of California. This was confirmed against the raw data, which showed that California has spent significantly more on outreach spending than other states. I also determined that the other three cluster groups most likely represent the earning, nonearning, and elderly groups.
 
 <p align="center">
-<img src="Images/cluster.png" width=650 height=560>
+<img src="Images/cluster.png" width=700 height=560>
 </p>
 
 ## Recommendations & Findings
