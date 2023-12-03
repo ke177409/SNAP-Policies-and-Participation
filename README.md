@@ -50,7 +50,7 @@ A positive linear relationship was detected between earning and nonearning indiv
 
 The EBT categorical plot was created to plot the different dollar percentages issued using EBT. I found that beginning in most of 2004 and onward, at least 80% of SNAP benefits were accounted by EBT in all states. 
 <p align="center">
-<img src="Images/EBT_catplot.png" width=370 height=330>
+<img src="Images/EBT_catplot.png" width=700 height=400>
 </p>
 
 The fingerprint categorical plot was created to show which states reported certain fingerprint requirements. States could report "not required", "required in parts of state", or "required". Arizona, California, Massachusetts, New York, and Texas have reported fingerprint requirements for SNAP applicants.
@@ -61,7 +61,7 @@ The fingerprint categorical plot was created to show which states reported certa
 A cluster analysis was performed using the k-means algorithm in an attempt to identify other groups not detected in the raw data. A scatter plot comparing outreach spending and the proportion of earning individuals showed some outlier data that was assigned its own group. I determined that this group represented outreach spending for the state of California. This was confirmed against the raw data, which showed that California has spent significantly more on outreach spending than other states. I also determined that the other three cluster groups most likely represent the earning, nonearning, and elderly groups.
 
 <p align="center">
-<img src="Images/cluster.png" width=370 height=330>
+<img src="Images/cluster.png" width=650 height=560>
 </p>
 
 ## Recommendations & Findings
