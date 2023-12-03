@@ -1,6 +1,8 @@
 # SNAP Policies and Participation: Project Overview
 Utilizing the Supplemental Nutrition and Assistance Program (SNAP) Policy Database, I conducted a thorough analysis aimed at identifying shifts in state policies and participation rates over time. Insights include relationships between SNAP recipient groups, relationships between different policies, and identification of policies potentially affecting participation rates. Python was used to clean data, perform exploratory analysis, and create data visualizations to detect relationships between different variables. Tableau was used to develop a user-friendly dashboard and supplemental visualizations.
 
+### [Tableau Dashboard](https://public.tableau.com/app/profile/kara.evans/viz/SNAPPoliciesParticipation/SNAPPoliciesParticipation?publish=yes)
+
 ## Tools & Skills
 Python Version: 3.11
 Tableau
