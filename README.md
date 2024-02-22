@@ -3,50 +3,21 @@ The Supplemental Nutrition Assistance Program (SNAP) is a federally funded initi
 
 ### [Tableau Dashboard](https://public.tableau.com/app/profile/kara.evans/viz/SNAPPoliciesParticipation/SNAPPoliciesParticipation?publish=yes)
 
-## Data 
-This dashboard uses data from the U.S. Department of Agriculture's (USDA) Economic Research Service (ERS) SNAP Policy Database. This database identifies when certain policies are in effect for each state and the proportions of different SNAP recipient groups. Policy information is obtained from the USDA's Food Nutrition Service (FNS) surveys, policy research organizations, state policy manuals, and news articles. Data collection spans from January 1996 to December 2016 across all 50 states and the District of Columbia. However, some policy details for 2015 and 2016 were unavailable at the time of collection.
-
-The USDA ERS Food Environment Atlas is a collection of data from a variety of sources that identify factors that may influence food choices and diet quality. Percentages of the eligible population participating in SNAP were calculated using estimates of SNAP participants divided by the number of people eligible to participate. Estimates of eligible populations were drawn from the Current Population Survey Annual Social and Economic Supplement and estimates of participants were drawn from SNAP administrative data. A regression model predicted participation rates using data from the American Community Survey, tax returns, population estimates, and administrative records. Different data sources produced different population estimates resulting in some states having predicted rates of 100%, but this should not be interpreted as 100% participation. However, states with significantly high or low estimated rates have consistent estimates.
-
-## Tools & Skills
-**Tableau**
-
-**Python Version: 3.11**
-
-Packages: pandas, NumPy, Matplotlib, seaborn, folium, json, sklearn, statsmodels
-* Executed data [cleaning](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.1%20Cleaning%2C%20Consistency%20Checks%2C%20%26%20Descriptive%20Analysis.ipynb) and [wrangling](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.2%20Exploring%20Relationships.ipynb) operations prior to analysis.
-* Conducted [geospatial analysis](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.3%20Geographic%20Visualization%20Folium.ipynb) using a shapefile to create a choropleth map.
-* Performed [regression analysis](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.4%20Supervised%20Machine%20Learning.ipynb) and analyzed model performance statistics.
-* Used [elbow technique](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.5%20Unsupervised%20Machine%20Learning.ipynb) to prepare data for cluster analysis using k-means algorithm.
-* Tested data for [stationarity](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.6%20Sourcing%20%26%20Analyzing%20Time%20Series%20Data.ipynb) using Dickey-Fuller test and autocorrelation plots.
-* Differenced data to ensure stationarity before conducting time-series analysis.
-
 ## Purpose & Context
 I independently sourced relevant and reliable datasets to educate the general public and policy makers about SNAP. Advanced exploratory analysis techniques were used to gain a deeper understanding of the differences in participation and policies over time. An interactive dashboard was created to easily convey the complexity in the data.
 
-## Data Cleaning & Transformation
-Summary of changes and modifications:
-* Omitted irrelevant columns "state_pc" and "state_fips".
-* Generated dictionaries to assign accurate data types and standardized column names for consistency and clarity.
-* Separated year and month values into separate columns for better data organization.
-* Checked for mixed data types, missing data, and duplicate entries.
-* Defined missing values as time points when policy data was not available at time of data collection.
-* Utilized "loc()" function in Python to create categorical columns, such as:
-  * "EBT category" to define different percentage levels of benefits allocated through electronic benefit transfers (EBT).
-  * "Fingerprint requirement" to identify states with certain fingerprint requirements.
-
 ## Visualizations
 The correlation heatmap was constructed using the Seaborn heatmap function in Python to reveal the influence of policies on one another. Notably, five policies displayed significant correlations with each other:
+
+<p align="center">
+<img src="Images/corr_heatmap_3.png" width=700 height=660>
+</p>
 
 Broad-Based Categorical Eligibility (BBCE) allows states to increase income and asset eligibility limits for low-income households. BBCE demonstrated a moderate positive correlation (0.59) with policies that refrain from limiting the number of household vehicles, which are considered assets.
 
 Policies that do not impose restrictions on household vehicles and policies that offer the simplified reporting option had a slightly stronger correlation (0.61). Simplified reporting reduces the requirements for households to report changes in their circumstances. 
 
 Policies that allow telephone interviews (instead of face-to-face interviews) during initial certification had a moderate positive correlation with policies that allow households to apply for SNAP online (0.59). 
-
-<p align="center">
-<img src="Images/corr_heatmap_3.png" width=700 height=660>
-</p>
 
 I hypothesized that as earning proportions increase, nonearning proportions will also increase. To test this hypothesis, a linear regression analysis was conducted to examine how variations in the proportion of earners impact the proportions of non-earners. A strong positive linear correlation of 0.89 was identified between these groups, particularly among those subject to 7-to-12 month recertification periods. The model's performance metrics revealed promising results, with a mean squared error of 0.0339 and an R2 score of 0.7973 for the training set. These statistics indicate that the model exhibits strong predictive capability and aligns well with the data. This relationship is likely due to non-earning individuals, such as children or other dependents, living in the same household as earning individuals.
 
@@ -85,6 +56,35 @@ Vermont participation rates were high in 2013, but not in 2011. Policies grantin
 * Developing a reliable time series model to forecast the proportions of recipient groups and their recertification periods could promote policies that better accommodate the predominant SNAP recipient groups.
 
 * Augmenting the database with subsequent years' data would enhance the relevance and currency of the insights derived from the analysis.
+
+## Data 
+This dashboard uses data from the U.S. Department of Agriculture's (USDA) Economic Research Service (ERS) SNAP Policy Database. This database identifies when certain policies are in effect for each state and the proportions of different SNAP recipient groups. Policy information is obtained from the USDA's Food Nutrition Service (FNS) surveys, policy research organizations, state policy manuals, and news articles. Data collection spans from January 1996 to December 2016 across all 50 states and the District of Columbia. However, some policy details for 2015 and 2016 were unavailable at the time of collection.
+
+The USDA ERS Food Environment Atlas is a collection of data from a variety of sources that identify factors that may influence food choices and diet quality. Percentages of the eligible population participating in SNAP were calculated using estimates of SNAP participants divided by the number of people eligible to participate. Estimates of eligible populations were drawn from the Current Population Survey Annual Social and Economic Supplement and estimates of participants were drawn from SNAP administrative data. A regression model predicted participation rates using data from the American Community Survey, tax returns, population estimates, and administrative records. Different data sources produced different population estimates resulting in some states having predicted rates of 100%, but this should not be interpreted as 100% participation. However, states with significantly high or low estimated rates have consistent estimates.
+
+## Tools & Skills
+**Tableau**
+
+**Python Version: 3.11**
+
+Packages: pandas, NumPy, Matplotlib, seaborn, folium, json, sklearn, statsmodels
+* Executed data [cleaning](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.1%20Cleaning%2C%20Consistency%20Checks%2C%20%26%20Descriptive%20Analysis.ipynb) and [wrangling](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.2%20Exploring%20Relationships.ipynb) operations prior to analysis.
+* Conducted [geospatial analysis](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.3%20Geographic%20Visualization%20Folium.ipynb) using a shapefile to create a choropleth map.
+* Performed [regression analysis](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.4%20Supervised%20Machine%20Learning.ipynb) and analyzed model performance statistics.
+* Used [elbow technique](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.5%20Unsupervised%20Machine%20Learning.ipynb) to prepare data for cluster analysis using k-means algorithm.
+* Tested data for [stationarity](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.6%20Sourcing%20%26%20Analyzing%20Time%20Series%20Data.ipynb) using Dickey-Fuller test and autocorrelation plots.
+* Differenced data to ensure stationarity before conducting time-series analysis.
+
+## Data Cleaning & Transformation
+Summary of changes and modifications:
+* Omitted irrelevant columns "state_pc" and "state_fips".
+* Generated dictionaries to assign accurate data types and standardized column names for consistency and clarity.
+* Separated year and month values into separate columns for better data organization.
+* Checked for mixed data types, missing data, and duplicate entries.
+* Defined missing values as time points when policy data was not available at time of data collection.
+* Utilized "loc()" function in Python to create categorical columns, such as:
+  * "EBT category" to define different percentage levels of benefits allocated through electronic benefit transfers (EBT).
+  * "Fingerprint requirement" to identify states with certain fingerprint requirements.
 
 ## The Learning Experience
 A choropleth map was generated to illustrate the average distribution of reported call centers across the United States. The legend denotes 0 as no call center, 1 as call center present, and 2 as call center situated in specific parts of a state. Unfortunately, the map's effectiveness in this analysis was limited due to the inability to appropriately adjust the color scale.
