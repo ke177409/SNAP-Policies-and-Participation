@@ -1,5 +1,5 @@
 # SNAP Policies and Participation: Project Overview
-### [Tableau Dashboard](https://public.tableau.com/app/profile/kara.evans/viz/SNAPPoliciesParticipation/SNAPPoliciesParticipation?publish=yes)
+## [Tableau Dashboard](https://public.tableau.com/app/profile/kara.evans/viz/SNAPPoliciesParticipation/SNAPPoliciesParticipation?publish=yes)
 
 The Supplemental Nutrition Assistance Program (SNAP) is a federally funded initiative collaborating with states to provide monthly food benefits to low-income individuals and households. Following welfare reform legislation in 1996, states gained greater autonomy in administering SNAP, leading to variances in state programs. This analysis aims to spotlight the evolution of policies in states with elevated participation rates. As states adopt more accommodating policies for recipients, SNAP participation rates are likely to increase.
 <p align="center">
