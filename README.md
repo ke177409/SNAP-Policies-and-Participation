@@ -1,5 +1,17 @@
 # SNAP Policies and Participation: Project Overview
-## [Tableau Dashboard](https://public.tableau.com/app/profile/kara.evans/viz/SNAPPoliciesParticipation/SNAPPoliciesParticipation?publish=yes)
+## Tools & Skills
+**Tableau**
+* [Dashboard and visualizations.](https://public.tableau.com/app/profile/kara.evans/viz/SNAPPoliciesParticipation/SNAPPoliciesParticipation?publish=yes)
+
+**Python Version: 3.11**
+
+Packages: pandas, NumPy, Matplotlib, seaborn, folium, json, sklearn, statsmodels
+* Executed data [cleaning](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.1%20Cleaning%2C%20Consistency%20Checks%2C%20%26%20Descriptive%20Analysis.ipynb) and [wrangling](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.2%20Exploring%20Relationships.ipynb) operations prior to analysis.
+* Conducted [geospatial analysis](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.3%20Geographic%20Visualization%20Folium.ipynb) using a shapefile to create a choropleth map.
+* Performed [regression analysis](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.4%20Supervised%20Machine%20Learning.ipynb) and analyzed model performance statistics.
+* Used [elbow technique](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.5%20Unsupervised%20Machine%20Learning.ipynb) to prepare data for cluster analysis using k-means algorithm.
+* Tested data for [stationarity](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.6%20Sourcing%20%26%20Analyzing%20Time%20Series%20Data.ipynb) using Dickey-Fuller test and autocorrelation plots.
+* Differenced data to ensure stationarity before conducting time-series analysis.
 
 The Supplemental Nutrition Assistance Program (SNAP) is a federally funded initiative collaborating with states to provide monthly food benefits to low-income individuals and households. Following welfare reform legislation in 1996, states gained greater autonomy in administering SNAP, leading to variances in state programs. This analysis aims to spotlight the evolution of policies in states with elevated participation rates. As states adopt more accommodating policies for recipients, SNAP participation rates are likely to increase.
 <p align="center">
@@ -43,19 +55,6 @@ Vermont participation rates were high in 2013, but not in 2011. Policies grantin
 This dashboard uses data from the U.S. Department of Agriculture's (USDA) Economic Research Service (ERS) SNAP Policy Database. This database identifies when certain policies are in effect for each state and the proportions of different SNAP recipient groups. Policy information is obtained from the USDA's Food Nutrition Service (FNS) surveys, policy research organizations, state policy manuals, and news articles. Data collection spans from January 1996 to December 2016 across all 50 states and the District of Columbia. However, some policy details for 2015 and 2016 were unavailable at the time of collection.
 
 The USDA ERS Food Environment Atlas is a collection of data from a variety of sources that identify factors that may influence food choices and diet quality. Percentages of the eligible population participating in SNAP were calculated using estimates of SNAP participants divided by the number of people eligible to participate. Estimates of eligible populations were drawn from the Current Population Survey Annual Social and Economic Supplement and estimates of participants were drawn from SNAP administrative data. A regression model predicted participation rates using data from the American Community Survey, tax returns, population estimates, and administrative records. Different data sources produced different population estimates resulting in some states having predicted rates of 100%, but this should not be interpreted as 100% participation. However, states with significantly high or low estimated rates have consistent estimates.
-
-## Tools & Skills
-**Tableau**
-
-**Python Version: 3.11**
-
-Packages: pandas, NumPy, Matplotlib, seaborn, folium, json, sklearn, statsmodels
-* Executed data [cleaning](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.1%20Cleaning%2C%20Consistency%20Checks%2C%20%26%20Descriptive%20Analysis.ipynb) and [wrangling](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.2%20Exploring%20Relationships.ipynb) operations prior to analysis.
-* Conducted [geospatial analysis](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.3%20Geographic%20Visualization%20Folium.ipynb) using a shapefile to create a choropleth map.
-* Performed [regression analysis](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.4%20Supervised%20Machine%20Learning.ipynb) and analyzed model performance statistics.
-* Used [elbow technique](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.5%20Unsupervised%20Machine%20Learning.ipynb) to prepare data for cluster analysis using k-means algorithm.
-* Tested data for [stationarity](https://github.com/ke177409/SNAP-Policies-and-Participation/blob/main/Scripts/6.6%20Sourcing%20%26%20Analyzing%20Time%20Series%20Data.ipynb) using Dickey-Fuller test and autocorrelation plots.
-* Differenced data to ensure stationarity before conducting time-series analysis.
 
 ## Data Cleaning & Transformation
 Summary of changes and modifications:
